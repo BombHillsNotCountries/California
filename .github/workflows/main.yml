@@ -1,17 +1,16 @@
-name: CI
-
 on: [push]
 
 jobs:
-  build:
-
+  meeting_nopes:
     runs-on: ubuntu-latest
-
+    name: Testing meeting nopes!
     steps:
-    - uses: actions/checkout@v2
-    - name: Run a one-line script
-      run: echo Hello, world!
-    - name: Run a multi-line script
-      run: |
-        echo Add other actions to build,
-        echo test, and deploy your project.
+    - name: Meeting nopes
+      id: nope
+      uses: jamesmartin/meetingnopes@v1
+      with:
+        template: 'some/file.md'
+        project-column-id: '3559690' 
+    # Use the output from the `hello` step
+    - name: Get the PR URL
+      run: echo "The PR is at ${{ steps.nope.outputs.pull-request-url }}"
