@@ -7,7 +7,7 @@ jobs:
     steps:
     - name: Meeting nopes
       id: nope
-      uses: jamesmartin/meetingnopes
+      uses: jamesmartin/meetingnopes@master
       with:
         template: 'some/file.md'
         project-column-id: '3559690' 
