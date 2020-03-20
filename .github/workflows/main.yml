@@ -12,6 +12,7 @@ jobs:
         template: 'notes/template.md'
         project-column-id: '8389143' 
         personal-access-token: ${{ secrets.MEETING_NOPES_PAT }}
+        github-token: ${{ secrets.GITHUB_TOKEN }}
     # Use the output from the `hello` step
     - name: Get the PR URL
       run: echo "The PR is at ${{ steps.nope.outputs.pull-request-url }}"
