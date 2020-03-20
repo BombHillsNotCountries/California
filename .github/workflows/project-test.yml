@@ -1,0 +1,12 @@
+
+on:
+  project_card:
+    types: [created]
+
+jobs:
+  test-project-triggers:
+    runs-on: ubuntu-latest
+    name: Testing project Actions triggers
+    steps:
+    - name: Test
+      run: echo "I was triggered!"
