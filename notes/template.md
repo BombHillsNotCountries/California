@@ -7,3 +7,4 @@
 {{#cards}}
 - [{{title}}]({{url}})
 {{/cards}}
+{{^cards}}Nothing in the triage column!({{/cards}}
