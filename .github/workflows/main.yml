@@ -9,8 +9,8 @@ jobs:
       id: nope
       uses: jamesmartin/meetingnopes@master
       with:
-        template: 'some/file.md'
-        project-column-id: '3559690' 
+        template: 'notes/template.md'
+        project-column-id: '8389143' 
     # Use the output from the `hello` step
     - name: Get the PR URL
       run: echo "The PR is at ${{ steps.nope.outputs.pull-request-url }}"
